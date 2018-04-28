@@ -4,10 +4,15 @@ require 'active_support/core_ext/hash/indifferent_access'
 # by calling dot operator with key name
 module StrongHash
   def self.new(hash)
-    StrongHash.new(hash)
+    hash = hash.dup
+    hash.each do |key, val|
+      next unless val.is_a?(Hash)
+      hash[key] = new(val)
+    end
+    StrongHashFactory.new(hash)
   end
 
-  class StrongHash
+  class StrongHashFactory
     def initialize(hash)
       @hash = ActiveSupport::HashWithIndifferentAccess.new(hash)
     end

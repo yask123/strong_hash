@@ -1,9 +1,5 @@
 # StrongHash
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/strong_hash`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+Let's you access Hash by dot operator. Just like calling a method on an object
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,8 +17,23 @@ Or install it yourself as:
     $ gem install strong_hash
 
 ## Usage
+```ruby
+require 'strong_hash'
 
-TODO: Write usage instructions here
+hash = {
+  name: 'Yask',
+  age: 23,
+  twitter: {
+    username: 'yask123'
+  }
+}
+
+StrongHash.new(hash).name
+> Yask
+
+StrongHash.new(hash).twitter.username
+> yask123
+```
 
 ## Development
 
@@ -32,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/strong_hash.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[yask123]/strong_hash.
 
 ## License
 

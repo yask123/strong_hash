@@ -2,7 +2,10 @@ RSpec.describe StrongHash do
   let(:test_hash) do
     {
       name: 'yask',
-      age: 23
+      age: 23,
+      country: {
+        name: 'Canada'
+      }
     }
   end
 
@@ -10,6 +13,12 @@ RSpec.describe StrongHash do
     hash_obj = StrongHash.new(test_hash)
     expect(hash_obj.name).to eq(test_hash[:name])
     expect(hash_obj.age).to eq(test_hash[:age])
+    expect(hash_obj.country.name).to eq('Canada')
+  end
+
+  it 'supports nested hashes as wellperator' do
+    hash_obj = StrongHash.new(test_hash)
+    expect(hash_obj.country.name).to eq(test_hash[:country][:name])
   end
 
   it 'raises NoMethodError for invalid keys' do

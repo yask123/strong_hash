@@ -13,10 +13,9 @@ RSpec.describe StrongHash do
     hash_obj = StrongHash.new(test_hash)
     expect(hash_obj.name).to eq(test_hash[:name])
     expect(hash_obj.age).to eq(test_hash[:age])
-    expect(hash_obj.country.name).to eq('Canada')
   end
 
-  it 'supports nested hashes as wellperator' do
+  it 'supports nested hashes' do
     hash_obj = StrongHash.new(test_hash)
     expect(hash_obj.country.name).to eq(test_hash[:country][:name])
   end

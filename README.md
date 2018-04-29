@@ -29,10 +29,10 @@ hash = {
 }
 
 StrongHash.new(hash).name
-> Yask
+#> Yask
 
 StrongHash.new(hash).twitter.username
-> yask123
+#> yask123
 ```
 
 ## Development
@@ -43,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[yask123]/strong_hash.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yask123/strong_hash.
 
 ## License
 

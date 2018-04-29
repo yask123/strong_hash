@@ -29,10 +29,10 @@ hash = {
 }
 
 StrongHash.new(hash).name
-#> Yask
+#> 'Yask'
 
 StrongHash.new(hash).twitter.username
-#> yask123
+#> 'yask123'
 ```
 
 ## Development

@@ -1,4 +1,6 @@
 # StrongHash
+[![Build Status](https://travis-ci.org/yask123/strong_hash.svg?branch=master)](https://travis-ci.org/yask123/strong_hash)
+
 Let's you access Hash by dot operator. Just like calling a method on an object
 ## Installation
 
